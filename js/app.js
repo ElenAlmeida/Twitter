@@ -15,6 +15,8 @@ function receiveData(){
         newMsg.style.marginLeft='25vw';
         newMsg.style.marginTop='2vw'
         newMsg.style.marginColor='red';
+        newMsg.style.borderRadius= '1vw';
+        newMsg.style.wordBrake='Brakeword';
     let MsgText= document.createTextNode(text);
     newMsg.appendChild(MsgText)
     let section= document.getElementById('public');
@@ -27,11 +29,11 @@ function receiveData(){
 function clean(messenger, contagem){
     document.getElementById('messenger').value='';
     document.getElementById('contagem').textContent=140;
-    document.getElementById('contagem').style.color='white';
+    document.getElementById('contagem').style.color='black';
 }
 
 function counter(){
-    let totalOfCharacters= 140;    
+    let totalOfCharacters= 139;    
     let typedCharacters= document.getElementById('messenger').value.length;
     let twittar= document.getElementById('twittar');
     let charactersRemaining= totalOfCharacters- typedCharacters;  
@@ -48,14 +50,14 @@ function counter(){
         document.getElementById('contagem').style.color= 'yellow';
     }
     else if( charactersRemaining <=140){
-        document.getElementById('contagem').style.color= 'white';
+        document.getElementById('contagem').style.color= 'black';
     }
 }
 
 
 function bloquear(){
     let mensagem= document.getElementById('messenger').value.length;
-    let totalOfCharacters= 240; 
+    let totalOfCharacters= 140; 
     let conta= totalOfCharacters-mensagem;
     if(mensagem>=totalOfCharacters){
         document.getElementById('messenger').value=document.getElementById('messenger').value.substr(0,totalOfCharacters);        
