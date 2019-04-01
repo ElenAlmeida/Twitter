@@ -7,16 +7,8 @@ twittar.addEventListener("click", function (){
 function receiveData(){
     let text= document.getElementById('messenger').value;
 
-    let newMsg= document.createElement('p')
-        newMsg.style.backgroundColor='white';
-        newMsg.style.width='50vw';
-        newMsg.style.height= '3vw';
-        newMsg.style.color='black';
-        newMsg.style.marginLeft='25vw';
-        newMsg.style.marginTop='2vw'
-        newMsg.style.marginColor='red';
-        newMsg.style.borderRadius= '1vw';
-        newMsg.style.wordBrake='Brakeword';
+    let newMsg= document.createElement('p');
+    newMsg.className = "newText";  
     let MsgText= document.createTextNode(text);
     newMsg.appendChild(MsgText)
     let section= document.getElementById('public');
@@ -85,25 +77,5 @@ function adaptar(line){
 
 
 
-// function counter(){
-//     let amountOfCharacter = 140;
-//     let numberOfCharacter= document.getElementById('messenger').value.length;
-//     let charactersEntered= amountOfCharacter - numberOfCharacter;
-    
-//     if (charactersEntered>=1){
-//         document.getElementById('contagem').innerHTML=charactersEntered;
-//         document.getElementById('twittar').disabled='';
-//     }else{
-//         document.getElementById('twittar').disabled='disabled';
-//     }
-// }
-
-
-
-
-// document.body.querySelector('#messenger').addEventListener('input', function(){
-//     let enableButton = document.body.querySelector('#twittar');
-//     enableButton.disabled= this.value.length>=1 ? false : true;  
-// });
 
   
